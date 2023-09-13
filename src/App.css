@@ -33,7 +33,7 @@ body {
     font-size: 40px;
     justify-content: center;
     text-align: center;
-    color: rgb(235, 212, 8);
+    color: rgb(250, 249, 243);
     background-color: rgba(0, 0, 0, 0.2); 
     border-radius: 5px;
     padding: 10px;
@@ -112,4 +112,5 @@ body {
 .completed {
     text-decoration: line-through;
     color: red;
+    background-color: rgb(2, 2, 2);
   }

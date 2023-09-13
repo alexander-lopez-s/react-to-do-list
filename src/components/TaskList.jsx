@@ -26,6 +26,7 @@ const TaskList = () => {
     setTasks(updatedTasks);
   };
 
+
   return (
     <>    
     <div className="form">
@@ -44,7 +45,6 @@ const TaskList = () => {
             key={index}
             task={task}
             onDelete={() => handleDeleteTask(index)}
-            onMark={() => handleMarkTask(index)}
           />
         ))}
     </div>
