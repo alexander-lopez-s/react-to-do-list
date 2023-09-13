@@ -1,10 +1,17 @@
-import "../App.css"
+import "../App.css";
+import { useState } from 'react';
 import { TbTrashXFilled } from "react-icons/tb";
 
 const Task = ({ task, onDelete }) => {
-  return (
-    <div className="task">
-      <p>{task}</p>
+  const [completed, setCompleted] = useState(false);
+
+  const toggleCompleted = () => {
+    setCompleted(!completed);
+  };
+
+   return (
+    <div className={`task ${completed ? 'completed' : ''}`} onClick={toggleCompleted}>
+      <span>{task}</span>
       <button onClick={onDelete}><TbTrashXFilled/></button>
     </div>
   );

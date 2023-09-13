@@ -16,12 +16,11 @@ const TaskList = () => {
   };
 
   const handleAddTask = () => {
-    // Add the current taskText to the tasks list
     setTasks([...tasks, taskText]);
     // Clear the input field
     setTaskText('');
   };
-
+    // 
   const handleDeleteTask = (index) => {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
@@ -29,7 +28,7 @@ const TaskList = () => {
 
   return (
     <>    
-    <div className="new-task-container">
+    <div className="form">
       <input
         type='text'
         value={taskText}
@@ -45,6 +44,7 @@ const TaskList = () => {
             key={index}
             task={task}
             onDelete={() => handleDeleteTask(index)}
+            onMark={() => handleMarkTask(index)}
           />
         ))}
     </div>
