@@ -6,7 +6,7 @@ import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState([
-    { id: 1, text: 'Go to the gym', completed: false },
+    { id: 1, text: 'Go to the gym', completed: false, },
     { id: 2, text: 'Walk the dog', completed: false },
     { id: 3, text: 'Go to the beach', completed: false },
   ]);

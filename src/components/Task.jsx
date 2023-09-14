@@ -9,10 +9,10 @@ const Task = ({ task, markAsCompleted, deleteTask }) => {
         {task.text} 
       </span>
       <div className="task-buttons">
-        <button onClick={() => markAsCompleted(task.id)}>
+        <button className={'complete-btn'} onClick={() => markAsCompleted(task.id)}>
           <MdOutlineDoneOutline />
         </button>
-        <button onClick={() => deleteTask(task.id)}>
+        <button className={'delete-btn'}onClick={() => deleteTask(task.id)}>
           <RiDeleteBin6Fill />
         </button>
       </div>

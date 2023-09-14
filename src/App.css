@@ -12,19 +12,26 @@ body {
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 400px;
     margin-top: 20px;
+    background-color: transparent;
+    color: #f0f0f0;
+    border: 1px solid white;
 }
 
 /* Style the title */
 .title {
-    color: #333;
+    color: rgb(241, 218, 4);
+    font-size: 40px;
 }
 
 /* Style the form */
 .form {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+    background-color: transparent;
 }
 
 /* Style the input and button */
@@ -34,6 +41,9 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     outline: none;
+    background-color: transparent;
+    font-size: 25px;
+    color: white;
 }
 
 button {
@@ -45,6 +55,7 @@ button {
     cursor: pointer;
     margin-top: 10px;
     margin-left: 5px;
+    font-size: 25px;
 }
 
 /* Style the task list */
@@ -58,22 +69,23 @@ button {
     display: flex;
     flex-direction: column-reverse;
     align-items: left;
+    background-color: transparent;
 }
 
 /* Style the buttons in the task list */
-.task-list button {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 0;
+
+.complete-btn {
+    background-color: #068545;
+}
+
+.delete-btn {
+    background-color: rgb(131, 51, 51);
 }
 
 .task {
   display: flex;
   flex-direction: row;
-  font-size: 15px;
+  font-size: 25px;
   justify-content: space-between;
   align-items: center;
 }
