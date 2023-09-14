@@ -1,11 +1,21 @@
-import "../App.css"
-import { TbTrashXFilled } from "react-icons/tb";
+import { MdOutlineDoneOutline } from 'react-icons/md';
+import { RiDeleteBin6Fill } from 'react-icons/ri';
 
-const Task = ({ task, onDelete }) => {
+
+const Task = ({ task, markAsCompleted, deleteTask }) => {
   return (
     <div className="task">
-      <p>{task}</p>
-      <button onClick={onDelete}><TbTrashXFilled/></button>
+      <span className={`task-text ${task.completed ? 'completed' : 'no'}`}>
+        {task.text} 
+      </span>
+      <div className="task-buttons">
+        <button onClick={() => markAsCompleted(task.id)}>
+          <MdOutlineDoneOutline />
+        </button>
+        <button onClick={() => deleteTask(task.id)}>
+          <RiDeleteBin6Fill />
+        </button>
+      </div>
     </div>
   );
 };
