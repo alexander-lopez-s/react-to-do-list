@@ -74,6 +74,15 @@ button {
 
 /* Style the buttons in the task list */
 
+.complete-btn:hover {
+    background-color: #0df17f;
+}
+
+.delete-btn:hover {
+    background-color: rgb(255, 11, 11);
+}
+
+
 .complete-btn {
     background-color: #068545;
 }
